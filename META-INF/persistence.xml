@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="constgr9bd">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>modelo.entidades.Categoria</class>
+    <class>modelo.entidades.Cuenta</class>
+    <class>modelo.entidades.Movimiento</class>
+    <class>modelo.entidades.Persona</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://constgr9.database.windows.net:1433;database=constgr9bd;user=Administrador@constgr9;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;"/>
+      <property name="javax.persistence.jdbc.user" value="Administrador"/>
+      <property name="javax.persistence.jdbc.password" value="constgr9+"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <!-- property name="eclipselink.ddl-generation" value="none" /-->
+      <!-- property name="eclipselink.ddl-generation" value="drop-and-create-tables"/-->
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
