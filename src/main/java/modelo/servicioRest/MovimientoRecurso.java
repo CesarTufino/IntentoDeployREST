@@ -20,7 +20,7 @@ public class MovimientoRecurso {
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Movimiento> getMovimientoById(@PathParam("id") int id) {
-		return DAOFactory.getFactory().getMovimientoDAO().getByPersona(id);
+		return DAOFactory.getFactory().getMovimientoDAO().getAll();
 	}
 
 	@POST
